@@ -6,35 +6,35 @@ public class hw6 {
     public static void main(String[] args) {
         int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] arr2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
-//        t1(arr);
-//        t2(arr);
-//        t3(arr);
-//        t4(arr);
-//        t5(arr);
-//        t6(arr);
-//        t7(arr);
-//        t8(arr);
-//        t9(arr);
-//        t10(arr);
-//        t11(arr);
-//        t12(arr2);
-//        t13(arr);
-//        t14(arr, 5);
+        t1(arr);
+        t2(arr);
+        t3(arr);
+        t4(arr);
+        t5(arr);
+        t6(arr);
+        t7(arr);
+        t8(arr);
+        t9(arr);
+        t10(arr);
+        t11(arr);
+        t12(arr2);
+        t13(arr);
+        t14(arr, 5);
         t15(arr);
-//            test(arr);
+//        test(arr);
     }
 
 
-    public static void test(int[][] arr){
-        System.out.println(Arrays.deepToString(arr));
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(Arrays.toString(arr[i]));
-
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.println(arr[i][j]);
-            }
-        }
-    }
+//    public static void test(int[][] arr){
+//        System.out.println(Arrays.deepToString(arr));
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(Arrays.toString(arr[i]));
+//
+//            for (int j = 0; j < arr[i].length; j++) {
+//                System.out.println(arr[i][j]);
+//            }
+//        }
+//    }
 
 
     public static void t1(int[][] arr) {
