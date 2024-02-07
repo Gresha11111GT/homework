@@ -1,11 +1,7 @@
 package hw;
-
-import java.util.Arrays;
-
 public class hw8 {
     public static void main(String[] args) {
         fibonacci(5);
-
     }
 //    public static int[] fib(int num){
 //
