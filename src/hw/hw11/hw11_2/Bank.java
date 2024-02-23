@@ -9,14 +9,9 @@ import java.util.Objects;
 public class Bank {
     static BankAccount[] bankAccounts;
 
-
     public Bank() {
         bankAccounts = new BankAccount[0];
-
     }
-
-    static boolean n = true;
-
     public void addBankAcc(String name) {
         bankAccounts = Arrays.copyOf(bankAccounts, bankAccounts.length + 1);
         bankAccounts[bankAccounts.length - 1] = new BankAccount(name);

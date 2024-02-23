@@ -17,21 +17,14 @@ public class WorkersSystem {
         int index = 0;
         Worker[] removeWorkers = new Worker[workers.length - 1];
         for (int i = 0; i < workers.length; i++) {
-            if (workers[i] != null){
-                if (!Objects.equals(workers[i].getName(), name) && !Objects.equals(workers[i].getProfession(), profession) && !Objects.equals(workers[i].getDepartment(), department)) {
-                    removeWorkers[index] = workers[i];
-                    System.out.println("Работник удален: " + name);
-                } else {
-                    index++;
-                }
+            if (!(Objects.equals(workers[i].getName(), name) && Objects.equals(workers[i].getProfession(), profession) && Objects.equals(workers[i].getDepartment(), department))) {
+                removeWorkers[index] = workers[i];
+                System.out.println("Работник удален: " + name);
+                index++;
             }
         }
-        if (workers == removeWorkers)
-            System.out.println("Работник с такими данными не найден");
         workers = removeWorkers;
-
     }
-
     public void countSalary(){
         int salary = 0;
         for (int i = 0; i < workers.length; i++) {
@@ -46,6 +39,6 @@ public class WorkersSystem {
         for (int i = 0; i < workers.length; i++) {
             salary+=workers[i].getSalary();
         }
-        System.out.println("Загальна зарплата працівників становить"+salary);
+        System.out.println("Загальна зарплата працівників становить"+salary/ workers.length);
     }
 }

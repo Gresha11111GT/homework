@@ -21,7 +21,7 @@ public class Library {
         int index = 0;
         Book[] removeBooks = new Book[books.length-1];
         for (int i = 0; i < books.length; i++) {
-            if (!Objects.equals(books[i].getTitle(), title) && !Objects.equals(books[i].getAuthor(), author)){
+            if (!(Objects.equals(books[i].getTitle(), title) && Objects.equals(books[i].getAuthor(), author))){
                 removeBooks[index] = books[i];
                 index++;
             }

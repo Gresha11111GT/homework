@@ -1,5 +1,4 @@
 package hw.hw11.hw11_3;
-
 public class main {
     public static void main(String[] args) {
         WorkersSystem workersSystem = new WorkersSystem();
@@ -9,7 +8,6 @@ public class main {
         workersSystem.countSalary();
         workersSystem.removeWorker("Gresha", "Manager", "IT");
         workersSystem.countSalary();
-//        System.avgSalary(system);
+        WorkersSystem.avgSalary(workersSystem);
     }
-
 }

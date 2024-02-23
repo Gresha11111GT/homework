@@ -9,13 +9,13 @@ public class Worker {
 
     private String department;
 
-    public Worker(String profession, String name, int salary, String department) {
-        this.profession = profession;
+    public Worker(String name, String profession,  int salary, String department) {
         this.name = name;
+        this.profession = profession;
         this.salary = salary;
         this.department = department;
-    }
 
+    }
     public String getProfession() {
         return profession;
     }
