@@ -9,6 +9,7 @@ public class Circle extends Shape{
     public void setR(int r) {
         this.r = r;
     }
+    @Override
     public void s() {
         System.out.println(Math.PI*r);
     }
