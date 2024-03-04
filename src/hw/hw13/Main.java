@@ -14,4 +14,3 @@ public class Main {
         System.out.println(tk.connect2ArrWithoutDouble(tk.arr, tk.generateArr(new ArrayList<>(), 20)));
     }
 }
-
