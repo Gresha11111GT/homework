@@ -1,4 +1,4 @@
-package ls.ls16;
+package hw.hw16;
 
 import javax.swing.*;
 import java.awt.*;
