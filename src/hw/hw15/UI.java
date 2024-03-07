@@ -1,4 +1,4 @@
-package ls.ls15;
+package hw.hw15;
 
 import hw.hw12.hw12_2.Circle;
 
@@ -14,7 +14,7 @@ public class UI extends JFrame implements ActionListener {
         text.setBounds(100, 0, 100, 100);
         text.setFont(new Font("Arial", Font.PLAIN, 32));
 
-        setSize(600,600);
+        setSize(600,700);
         setLayout(null);
         JPanel botElements = new JPanel();
 
@@ -97,13 +97,16 @@ public class UI extends JFrame implements ActionListener {
         b15.setBounds(200,400 ,100 ,100);
         b15.setFont(new Font("Arial", Font.PLAIN, 32));
         add(b15);
-        add(botElements);
 
         JButton b16 = new JButton("^");
         b16.setBounds(400,500 ,100 ,100);
         b16.setFont(new Font("Arial", Font.PLAIN, 32));
         add(b16);
-        add(botElements);
+
+        JButton b17 = new JButton("√");
+        b17.setBounds(300,500 ,100 ,100);
+        b17.setFont(new Font("Arial", Font.PLAIN, 32));
+        add(b17);
 
         b0.addActionListener(this);
         b1.addActionListener(this);
@@ -122,6 +125,7 @@ public class UI extends JFrame implements ActionListener {
         b14.addActionListener(this);
         b15.addActionListener(this);
         b16.addActionListener(this);
+        b17.addActionListener(this);
 
         setVisible(true);
         add(text);
@@ -129,12 +133,13 @@ public class UI extends JFrame implements ActionListener {
 
     String num1;
     String sign;
+    String Num2;
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton b = (JButton) e.getSource();
         if(text.getText().equals("0"))
             text.setText("");
-        int result = 0;
+        double result = 0;
         switch (b.getText()){
             case "1":
                 text.setText(text.getText()+"1");
@@ -166,7 +171,7 @@ public class UI extends JFrame implements ActionListener {
             case "0":
                 text.setText(text.getText()+"0");
                 break;
-            case "⌦":
+            case "⌫":
                 text.setText("0");
                 break;
             case "÷":
@@ -193,9 +198,16 @@ public class UI extends JFrame implements ActionListener {
                 num1 = text.getText();
                 sign = "^";
                 result = Integer.valueOf(num1)*Integer.valueOf(num1);
+                text.setText(String.valueOf(result));
+                break;
+            case "√":
+                num1 = text.getText();
+                sign = "√";
+                result = (int) Math.sqrt(Integer.valueOf(num1));
+                text.setText(String.valueOf(result));
+                break;
             case "=":
                 String num2 = text.getText();
-
                 switch (sign){
                     case "+":
                         result = Integer.valueOf(num1)+Integer.valueOf(num2);
@@ -208,9 +220,6 @@ public class UI extends JFrame implements ActionListener {
                         break;
                     case "÷":
                         result = Integer.valueOf(num1)/Integer.valueOf(num2);
-                        break;
-                    case "^":
-                        result = Integer.valueOf(num1)*Integer.valueOf(num1);
                         break;
                 }
                 text.setText(String.valueOf(result));
