@@ -28,7 +28,7 @@ public class Bank {
     public void unblockBankAcc(BankAccount name) {
         name.setStateOfAcc(true);
     }
-    public void addMoney(String name, int moneyToAdd){
+    public synchronized void addMoney(String name, int moneyToAdd){
         BankAccount ba = getCardByName(name);
         if (ba!=null){
             if (ba.isStateOfAcc()){
@@ -40,7 +40,7 @@ public class Bank {
         }
         else System.out.println("Такого рахунку не знайдено гигиги");
     }
-    public void removeMoney(String name, int moneyToRemove){
+    public synchronized void removeMoney(String name, int moneyToRemove){
         BankAccount ba = getCardByName(name);
         if (ba!=null){
             if (ba.isStateOfAcc()) {
